@@ -10,7 +10,8 @@ const res = await client.getEntries({content_type:'recipe'})
 return{
   props:{
     recipes:res.items
-  }
+  },
+  revalidate:10
 }
 }
 export default function Home({recipes}) {
